@@ -44,6 +44,12 @@ $container-max-widths: (
 
 // Typography
 
+$font-family-sans-serif: "Roboto", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-weight-bold: 700;
+$headings-font-weight: $font-weight-bold;
+$display-font-weight: $font-weight-bold;
+
 // Tables
 
 // Buttons + Forms

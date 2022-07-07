@@ -3,5 +3,39 @@ layout: default
 ---
 
 <div class="container py-4 py-md-5">
-    <h1>Homepage</h1>
+    <h2 class="h1">Energy prices are soaring, and if you rent it can be harder to work out what you can do about it.</h2>
+    <p>The energy efficiency of your home can play a massive part in your energy costs. Your home should have an EPC certificate which shows its energy efficiency on an A–G scale, along with steps you can take to improve it.</p>
+    <p>By law, rental properties in the UK must have an EPC rating of E or above. Still, as many as 1 in 20 rental properties in the UK currently fall below this threshold.</p>
+    <p>If you’re renting a property, and it has an EPC rating of F or G, there are steps you can take to get your landlord to fix it, making your home easier and cheaper to heat.</p>
+
+    <h3>This free tool from UK charity mySociety will show you:</h3>
+    <ul>
+        <li>Your home’s EPC rating</li>
+        <li>Common EPC pitfalls and mistakes to check for</li>
+        <li>Next steps, tailored to you, for making your home easier and cheaper to heat</li>
+        <li>Tenant support organisations that can help</li>
+    </ul>
+
+    <form action="{{ 'epc' | relative_url }}">
+        <legend>Enter your postcode and tenancy duration to get started:</legend>
+        <div class="mb-3">
+            <label for="postcode" class="form-label">Postcode</label>
+            <input class="form-control" id="postcode" style="text-transform: uppercase">
+        </div>
+        <div class="mb-3">
+            <label for="tenancy" class="form-label">Tenancy type</label>
+            <select class="form-select" id="tenancy">
+                <optgroup label="Private rental tenant">
+                    <option>I’ve rented here for more than a year</option>
+                    <option>I’ve rented here for less than a year</option>
+                </optgroup>
+                <optgroup label="Other type of tenancy">
+                    <option>I’m a social housing tenant</option>
+                    <option>I own this property</option>
+                </optgroup>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Find my EPC</button>
+    </form>
+
 </div>
