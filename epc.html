@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="container py-4 py-md-5">
+<div class="container py-4 py-md-5" style="padding-bottom: 10rem !important">
     <h2 class="h1">17 Madeup Avenue <small class="d-block" style="font-size: 1.25rem">Exampleton, Borsetshire, B5 5EG</small></h2>
 
     <div class="card shadow mt-5">
@@ -37,7 +37,7 @@ layout: default
             <dt class="col-md-3 mb-3">Certificate number</dt>
             <dd class="col-md-9 mb-3">0919-9628-8430-2785-5996</dd>
             <dt class="col-md-3 mb-3">EPC type</dt>
-            <dd class="col-md-9 mb-3">RdSAP <strong class="bg-red-100 px-3 py-1 ms-2" style="border-radius: 10rem;">Warning!</strong></dd>
+            <dd class="col-md-9 mb-3">RdSAP <strong class="bg-red-100 px-3 py-1 ms-2" style="border-radius: 10rem;">{% include icons/exclamation-triangle.html classes="text-danger me-1" %} Warning!</strong></dd>
             <dt class="col-md-3 mb-3">EPC expires</dt>
             <dd class="col-md-9 mb-3">15 November 2024</dd>
         </dl>
@@ -50,14 +50,18 @@ layout: default
     <div style="max-width: 36em">
         <p>By law, private rental properties must have an EPC rating of E or above. Your home has a rating of E … but as many as 5% of EPCs are actually incorrect.</p>
         <p>If your EPC is one of them, your landlord could be required to cover the cost of energy efficiency improvements, to bring your home’s EPC grade back up to an E.</p>
-        <p>As your EPC was measured using the less accurate “RdSAP” methodology, it is <em>even more likely</em> to be incorrect.</p>
+
+        <p class="mt-5">
+            <strong class="bg-red-100 px-3 py-1" style="border-radius: 10rem;">{% include icons/exclamation-triangle.html classes="text-danger me-1" %} Warning!</strong>
+        </p>
+        <p>As your EPC was measured using the less accurate “RdSAP” methodology, it is <em>even more likely</em> to be incorrect. Checking the details is quick and easy.</p>
     </div>
 
     <hr class="my-5">
 
-    <h2>Things to check</h2>
+    <h2 class="mb-4">Things to check</h2>
 
-    <div class="card mt-4 shadow">
+    <div class="card mb-5 shadow">
         <div class="card-header bg-red-100 px-lg-4 py-lg-3">
             <h3 class="mb-0 lh-1">Floor area</h3>
         </div>
@@ -65,7 +69,7 @@ layout: default
             <div class="row">
                 <div class="col-lg-6">
                     <h4>What to check:</h4>
-                    <p class="mb-0">That your floor area is accurate.</p>
+                    <p class="mb-0">That the floor area listed on your EPC matches the <em>actual</em> floor area inside your home. <a href="#">Find out how to measure floor area.</a></p>
                 </div>
                 <div class="col-lg-6">
                     <h4>Why it matters</h4>
@@ -75,7 +79,7 @@ layout: default
         </div>
     </div>
 
-    <div class="card mt-5 shadow">
+    <div class="card mb-5 shadow">
         <div class="card-header bg-orange-100 px-lg-4 py-lg-3">
             <h3 class="mb-0 lh-1">Insulation</h3>
         </div>
@@ -87,26 +91,60 @@ layout: default
                 </div>
                 <div class="col-lg-6">
                     <h4>Why it matters</h4>
-                    <p class="mb-0">Unscrupulous EPC assessors will often fail to correctly check the type of insluation used in inaccessible parts of your home. If your home lacks insulation that the assessor assumed was there, this could mean your home is of a lower grade than expected, potentially requiring your landlord to cover the cost of energy efficiency measures.</p>
+                    <p>Unscrupulous EPC assessors will often fail to correctly check the type of insluation used in inaccessible parts of your home.</p>
+                    <p class="mb-0">If your home lacks insulation that the assessor assumed was there, this could mean your home is of a lower grade than expected, potentially requiring your landlord to cover the cost of energy efficiency measures.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <a href="#">Show full checklist for your home</a>
+
     <hr class="my-5">
 
     <h2>Next steps</h2>
 
-    <p>If you’ve found inaccuracies, we’d encourage you to <a href="#">find your local tenant support group</a>, for advice on challenging your EPC rating.</p>
-    <p>Good landlords will be happy to make changes that meet legal requirements – but bad landlords might use this as an excuse to raise the rent. <a href="#">Our step-by-step guide</a> can help you work out whether to push for better energy efficiency, in your particular situation.</p>
-
-    <form>
-        <legend>Get step-by-step advice over email</legend>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email">
+    <div class="row mb-5">
+        <div class="col-md-6 mt-4">
+            <p>If you’ve found inaccuracies, we’d encourage you to <a href="#">find your local tenant support group</a>, for advice on challenging your EPC rating.</p>
+            <p>Good landlords will be happy to make changes that meet legal requirements – but bad landlords might use this as an excuse to raise the rent. <a href="#">Our step-by-step guide</a> can help you work out whether to push for better energy efficiency, in your particular situation.</p>
         </div>
-        <button type="submit" class="btn btn-primary">Sign up for free</button>
-    </form>
+        <div class="col-md-5 offset-md-1 mt-4">
+            <form class="card p-3 p-lg-4 shadow">
+                <legend class="h5">Get step-by-step advice over email</legend>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <button type="submit" class="btn btn-success">Sign up for free</button>
+            </form>
+        </div>
+    </div>
+
+    <h2 class="h3">Get help</h2>
+
+    <div class="row">
+        <div class="col-md-4 mt-4 d-flex flex-column">
+            <div class="bg-yellow-100 p-3 p-lg-4 rounded flex-grow-1 d-flex flex-column">
+                <h3 class="h2">Citizens Advice</h3>
+                <p>Get free, impartial, confidential advice on a range of housing-related issues – by phone or in person.</p>
+                <p class="mb-0 mt-auto"><a href="#">Find out more</a></p>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4 d-flex flex-column">
+            <div class="bg-orange-100 p-3 p-lg-4 rounded flex-grow-1 d-flex flex-column">
+                <h3 class="h2">ACORN</h3>
+                <p>ACORN chapters across the UK campaign for the rights of low-income communities, including renters. Anyone is welcome to join them.</p>
+                <p class="mb-0 mt-auto"><a href="#">Find out more</a></p>
+            </div>
+        </div>
+        <div class="col-md-4 mt-4 d-flex flex-column">
+            <div class="bg-red-100 p-3 p-lg-4 rounded flex-grow-1 d-flex flex-column">
+                <h3 class="h2">Generation Rent</h3>
+                <p>Generation Rent is fighting to stop renters being unfairly evicted from their homes. They can provide support and advice on your rights, if you’re facing eviction.</p>
+                <p class="mb-0 mt-auto"><a href="#">Find out more</a></p>
+            </div>
+        </div>
+    </div>
 
 </div>
